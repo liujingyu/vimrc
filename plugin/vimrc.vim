@@ -12,19 +12,6 @@ end
 "                                    基本配置                                    "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable strange Vi defaults.
-set nocompatible
-
-" Turn on filetype plugins (:help filetype-plugin).
-if has('autocmd')
-    filetype plugin indent on
-endif
-
-" Enable syntax highlighting.
-if has('syntax')
-    syntax enable
-endif
-
 "line no
 set nu
 "光标
