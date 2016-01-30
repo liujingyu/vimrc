@@ -134,6 +134,7 @@ au BufWrite *.php :call DeleteTrailingWS()
 au BufWrite *.py :call DeleteTrailingWS()
 au BufWrite *.js :call DeleteTrailingWS()
 au BufWrite *.vimrc :call DeleteTrailingWS()
+au BufWrite *.md :call DeleteTrailingWS()
 
 " 为方便复制，用<F2>开启/关闭行号显示:
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
