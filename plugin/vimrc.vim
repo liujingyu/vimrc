@@ -109,9 +109,9 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ " Line:
 " ctags设置
 " set tags+=/Users/apple
 " set autochdir
-set tags=tags;/
-" 生成一个tags文件
-nmap <F9> <Esc>:!ctags -R *<CR>
+" set tags=tags;/
+" " 生成一个tags文件
+" nmap <F9> <Esc>:!ctags -R *<CR>
 
 " 设置好后，可在Vim中使用如下功能：Ctrl-]转至最佳匹配的相应Tag，Ctrl-T返回上一个匹配。
 " 如果有多个匹配，g Ctrl-]可显示所有备选的tags。如有需要，可互换Ctrl-]和g Ctrl-] [11]：
@@ -187,4 +187,9 @@ let php_htmlInStrings=1
 "利用composer 安装pman,命令 composer global require gonzaloserrano/pman-php-manual:dev-master
 au FileType php setlocal keywordprg=pman
 
-
+set tags=./tags;/
+augroup TagFileType
+    autocmd!
+    autocmd FileType * setl tags<
+    autocmd FileType * exe 'setl tags+=~/.ctags/' . &filetype . '/*/tags'
+augroup END
