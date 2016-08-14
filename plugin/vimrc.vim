@@ -132,6 +132,8 @@ endfunc
 
 au BufWrite *.php :call DeleteTrailingWS()
 au BufWrite *.py :call DeleteTrailingWS()
+au BufWrite *.java :call DeleteTrailingWS()
+au BufWrite *.xml :call DeleteTrailingWS()
 au BufWrite *.js :call DeleteTrailingWS()
 au BufWrite *.vimrc :call DeleteTrailingWS()
 au BufWrite *.md :call DeleteTrailingWS()
